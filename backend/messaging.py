@@ -1,7 +1,7 @@
 from twilio.rest import Client
 import smtplib
 from email.mime.text import MIMEText
-from config import *
+from utils.config import *
 
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 

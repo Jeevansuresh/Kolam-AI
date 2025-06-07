@@ -1,7 +1,7 @@
 import google.generativeai as genai
-from config import API_KEY
-from models import ChatHistory, MemoryLog, SessionLocal
-from messaging import send_whatsapp_message, send_booking_email
+from utils.config import API_KEY
+from backend.models import ChatHistory, MemoryLog, SessionLocal
+from backend.messaging import send_whatsapp_message, send_booking_email
 from datetime import datetime
 
 genai.configure(api_key=API_KEY)

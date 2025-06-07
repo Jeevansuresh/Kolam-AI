@@ -1,7 +1,14 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from ai_agent.ai_agent import generate_response
+
+
 from flask import Flask, render_template, request, jsonify
-from ai_agent import generate_response
-from models import init_db
-from utils import clean_phone_number
+from backend.models import init_db
+from utils.utils import clean_phone_number
 
 app = Flask(__name__)
 init_db()
