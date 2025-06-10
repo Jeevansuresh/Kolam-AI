@@ -23,8 +23,8 @@ def send_message():
     user_phone = request.form.get("phone", "").strip()
     if not user_message:
         return jsonify({"response": "Please enter a valid message."})
-    if not user_phone:
-        return jsonify({"response": "Please provide your phone number for session tracking."})
+    if not user_phone or user_phone=="unkown":
+        return jsonify({"response": "Hi! I’m Kolamai 👋 — your personal assistant at Kolam Serviced Apartments. Could you please share your phone number so I can assist you?"})
 
     phone_number = clean_phone_number(user_phone)
     response_text = generate_response(user_message, phone_number)

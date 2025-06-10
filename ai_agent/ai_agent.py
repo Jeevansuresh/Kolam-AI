@@ -143,6 +143,7 @@ Item: [item if any, or "none"]
         return reply
 
     except Exception as e:
+        print(f" Gemini Error: {e}")
         error_msg = "Sorry, I'm facing a technical issue. Please try again later."
         save_chat(phone_number, "bot", error_msg)
         save_memory(phone_number, f"Error: {e}")
